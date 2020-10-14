@@ -14,6 +14,24 @@
 
 **5.- Cuales son los elementos unicos de la lista Lista(1,3,3,4,6,7,3,7) utilice conversion a conjuntos**
 
+First we declare the list with the elements provided by the exercise:
+
+```scala
+scala> val Lista = List(1,3,3,4,6,7,3,7)
+```
+
+Then we apply the "distinct" method to the list, this will throw all the uniques values in order:
+
+```scala
+scala> Lista.distinct
+```
+
+The method will print like the code below:
+
+```scala
+res0: List[Int] = List(1, 3, 4, 6, 7)
+```
+
 
 **6.- Crea una mapa mutable llamado nombres que contenga los siguiente "Jose", 20, "Luis", 24, "Ana", 23, "Susana", "27"**
 
@@ -40,9 +58,10 @@ println(nombres)
 Map(Susana -> 27, Ana -> 23, Luis -> 24, Jose -> 20)
 ```
 
+
 **7 a .- Agrega el siguiente valor al mapa("Miguel", 23)**
 
-To add an element to the map we have to follow the syntax that we show bellow:
+To add an element to the map we have to follow the syntax that we show below:
 
 ```scala
 nombres += ("Miguel" -> 23)
