@@ -31,7 +31,8 @@ Creating array and adding the number sequence and changing first number to numbe
 ```scala
 val x = Array.range(0, 1005, 5)
 x(0) = 1
-x ```
+x
+```
 
 **5.- Cuales son los elementos unicos de la lista Lista(1,3,3,4,6,7,3,7) utilice conversion a conjuntos**
 
