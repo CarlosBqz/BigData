@@ -4,8 +4,7 @@ https://es.wikipedia.org/wiki/Sucesión_de_Fibonacci
 
 We will apply those codes to Scala:
 
-**Fibonacci 1
-**
+**Fibonacci 1**
 ```scala
 def Fibonacci1(n:Int): Int =  {
 		if(n < 2)
@@ -22,8 +21,7 @@ def Fibonacci1(n:Int): Int =  {
 
 
 
-**Fibonacci 2
-**
+**Fibonacci 2**
 ```scala
 def Fibonacci2(n:Double): Double = 
 	var p: Double = ((1 + scala.math.sqrt(5)) / 2)
@@ -40,8 +38,7 @@ def Fibonacci2(n:Double): Double =
 ```
 
 
-**Fibonacci 3
-**
+**Fibonacci 3**
 ```scala
 def Fibonacci3(n:Int) : Int = {
 	var a = 0 
@@ -63,8 +60,7 @@ def Fibonacci3(n:Int) : Int = {
 
 
 
-**Fibonacci 4
-**
+**Fibonacci 4**
 ```scala
 def Fibonacci4(n:Int) : Int = {
 	var a = 0
@@ -84,8 +80,7 @@ def Fibonacci4(n:Int) : Int = {
 
 
 
-**Fibonacci 5 
-**
+**Fibonacci 5 **
 ```scala
 def Fibonacci5(n:Int) : Int = {
 	if(n < 2)
