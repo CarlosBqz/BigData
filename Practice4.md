@@ -80,7 +80,7 @@ def Fibonacci4(n:Int) : Int = {
 
 
 
-**Fibonacci 5 **
+**Fibonacci 5**
 ```scala
 def Fibonacci5(n:Int) : Int = {
 	if(n < 2)
