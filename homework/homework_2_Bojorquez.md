@@ -1,3 +1,5 @@
+<div align="center">
+
 **Instituto Tecnológico de Tijuana**
 
 Departamento de Ciencias y Computación
@@ -27,6 +29,7 @@ SC9A
 
 **Fecha:**
 Tijuana, Baja California a 19 de Octubre de 2020. 
+</div>
 
 
 ### ¿Qué es el coeficiente de correlación de Pearson?
