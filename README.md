@@ -13,5 +13,5 @@
 ### [Homework](https://github.com/CarlosBqz/BigData/tree/Unidad1/homework "Homework")
 - [Homework 1 Pair Coding (Aulis)](https://github.com/CarlosBqz/BigData/blob/Unidad1/homework/homework_1_VictorAulis.md "Homework 1 Pair Coding (Aulis)")
 - [Homework 1 Pair Coding (Bojorquez)](https://github.com/CarlosBqz/BigData/blob/Unidad1/homework/homework_1_Bojorquez.md "Homework 1 Pair Coding (Bojorquez)")
-- Homework 2 Pearson (Aulis)
+- [Homework 2 Pearson (Aulis)](https://github.com/CarlosBqz/BigData/blob/Unidad1/homework/homework_2_VictorAulis.md "Homework 2 Pearson (Aulis)")
 - [Homework 2 Pearson (Bojorquez)](https://github.com/CarlosBqz/BigData/blob/Unidad1/homework/homework_2_Bojorquez.md "Homework 2 Pearson (Bojorquez)")
