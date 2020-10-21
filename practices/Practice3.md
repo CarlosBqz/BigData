@@ -67,6 +67,8 @@ println(afortunado(af))
 
 The following code block declares a function named "balance". This function will analyze a lists to see if the list is "balanced" between their values. First there is a declaration of two variables named "primera" and "segunda", these variables are for calculating if there is a balance between the values of the list. "Segunda" is equal to the sum of all the values in the list. The for cycle will start from 0 to the length of the list.
 
+to confirm the balance, the "segunda" list is decremented equal to each of the values in the list and the "primera" variable increases according to each value in the list
+
 "primera" is equal to the value of "primera" plus the value of the first variable in the list.
 
 "segunda" is equal to the value of "segunda" minus the value of the first variable in the list.
