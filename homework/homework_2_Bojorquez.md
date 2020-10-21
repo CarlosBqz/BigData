@@ -1,5 +1,7 @@
 **Instituto Tecnológico de Tijuana**
+
 Departamento de Ciencias y Computación
+
 Ingeniería en Sistemas Computacionales
  
  [![](https://upload.wikimedia.org/wikipedia/commons/2/2e/ITT.jpg)](https://upload.wikimedia.org/wikipedia/commons/2/2e/ITT.jpg)
@@ -27,7 +29,7 @@ SC9A
 Tijuana, Baja California a 19 de Octubre de 2020. 
 
 
-###¿Qué es el coeficiente de correlación de Pearson?
+### ¿Qué es el coeficiente de correlación de Pearson?
 
 El **coeficiente de correlación de Pearson** es la covarianza estandarizada, y su ecuación difiere dependiendo de si se aplica a una muestra, Coeficiente de Pearson muestral (r), o si se aplica la población Coeficiente de Pearson poblacional (ρ).
  

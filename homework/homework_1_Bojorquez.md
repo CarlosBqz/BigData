@@ -1,5 +1,7 @@
 **Instituto Tecnológico de Tijuana**
+
 Departamento de Ciencias y Computación
+
 Ingeniería en Sistemas Computacionales
  
  [![](https://upload.wikimedia.org/wikipedia/commons/2/2e/ITT.jpg)](https://upload.wikimedia.org/wikipedia/commons/2/2e/ITT.jpg)
@@ -27,7 +29,7 @@ SC9A
 Tijuana, Baja California a 09 de Octubre de 2020. 
 
 
-###¿Qué es pair coding?
+### ¿Qué es pair coding?
 
 La programación por parejas consta de dos programadores que comparten una única estación de trabajo (una pantalla, teclado y ratón entre la pareja). El programador en el teclado generalmente se llama el "controlador", el otro, también participa activamente en la tarea de programación, pero se centra más en la dirección general es el "navegador"; se espera que los programadores intercambien roles cada pocos minutos aproximadamente.
 
