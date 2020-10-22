@@ -34,7 +34,7 @@ Tijuana, Baja California, October 19, 2020. 
 
 ### What is Pearson's correlation coefficient?
 
-The ** Pearson correlation coefficient ** is the standardized covariance, and its equation differs depending on whether it is applied to a sample, sample Pearson's coefficient (r), or if the population population Pearson's coefficient (ρ) is applied.
+The **Pearson correlation coefficient** is the standardized covariance, and its equation differs depending on whether it is applied to a sample, sample Pearson's coefficient (r), or if the population population Pearson's coefficient (ρ) is applied.
  
  [![](https://www.webyempresas.com/wp-content/uploads/2018/05/formula.jpg)](https://www.webyempresas.com/wp-content/uploads/2018/05/formula.jpg)
 
