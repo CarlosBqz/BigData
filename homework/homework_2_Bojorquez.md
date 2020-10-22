@@ -40,19 +40,19 @@ The ** Pearson correlation coefficient ** is the standardized covariance, and it
 
 **Terms**
 
-● The relationship to be studied between both variables is linear (otherwise, the Pearson coefficient cannot detect it).
-● The two variables must be quantitative.
-● Normality: both variables have to be distributed in a normal way. Several texts defend its robustness when the variables are moderately far from normal.
-● Homoscedasticity: The variance of Y must be constant throughout the variable X. This can be identified if in the scatterplot the points maintain the same dispersion in the different areas of the variable X. I have not found this condition mentioned in all the books.
+- The relationship to be studied between both variables is linear (otherwise, the Pearson coefficient cannot detect it).
+- The two variables must be quantitative.
+- Normality: both variables have to be distributed in a normal way. Several texts defend its robustness when the variables are moderately far from normal.
+- Homoscedasticity: The variance of Y must be constant throughout the variable X. This can be identified if in the scatterplot the points maintain the same dispersion in the different areas of the variable X. I have not found this condition mentioned in all the books.
 
 **Features**
 
-● It takes values ​​between [-1, +1], with +1 being a perfect positive linear correlation and -1 being a perfect negative linear correlation.
-● It is an independent measure of the scales in which the variables are measured.
-● It does not vary if transformations are applied to the variables.
-● It does not take into account that the variables are dependent or independent.
-● Pearson's correlation coefficient does not equal the slope of the regression line.
-● It is sensitive to outliers, so it is recommended, if it can be justified, to exclude them from the analysis.
+- It takes values ​​between [-1, +1], with +1 being a perfect positive linear correlation and -1 being a perfect negative linear correlation.
+- It is an independent measure of the scales in which the variables are measured.
+- It does not vary if transformations are applied to the variables.
+- It does not take into account that the variables are dependent or independent.
+- Pearson's correlation coefficient does not equal the slope of the regression line.
+- It is sensitive to outliers, so it is recommended, if it can be justified, to exclude them from the analysis.
 
 **Interpretation**
 

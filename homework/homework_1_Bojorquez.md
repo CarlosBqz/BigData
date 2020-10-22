@@ -37,15 +37,15 @@ Pair programming consists of two programs that share a single workstation (a scr
 
 **Common mistakes**
 
-● Both schedulers must actively participate in the task during a paired session; otherwise, no benefit can be expected.
-● At least the driver, and possibly both programmers, are expected to keep an active comment on what they are doing; Pair programming is also "programming out loud": if the driver is silent, the navigator must intervene.
-● Pair programming cannot be fruitfully imposed on people, especially if relationship problems, including more mundane ones (such as personal hygiene), get in the way; these must be resolved first.
+- Both schedulers must actively participate in the task during a paired session; otherwise, no benefit can be expected.
+- At least the driver, and possibly both programmers, are expected to keep an active comment on what they are doing; Pair programming is also "programming out loud": if the driver is silent, the navigator must intervene.
+- Pair programming cannot be fruitfully imposed on people, especially if relationship problems, including more mundane ones (such as personal hygiene), get in the way; these must be resolved first.
 
 **Benefits**
 
-● Better dissemination of knowledge among the team, particularly when a developer who is not familiar with a component is paired with one who knows it much better.
-● Better transfer of skills, as junior developers acquire micro-techniques or broader skills from more experienced team members.
-● Higher code quality: "Code out loud" leads to clearer articulation of the complexities and hidden details in coding tasks, reducing the risk of errors or falling into dead ends.
+- Better dissemination of knowledge among the team, particularly when a developer who is not familiar with a component is paired with one who knows it much better.
+- Better transfer of skills, as junior developers acquire micro-techniques or broader skills from more experienced team members.
+- Higher code quality: "Code out loud" leads to clearer articulation of the complexities and hidden details in coding tasks, reducing the risk of errors or falling into dead ends.
 
 **Conclusion**
 
