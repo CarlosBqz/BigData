@@ -8,56 +8,55 @@ Ingeniería en Sistemas Computacionales
  
  [![](https://upload.wikimedia.org/wikipedia/commons/2/2e/ITT.jpg)](https://upload.wikimedia.org/wikipedia/commons/2/2e/ITT.jpg)
 
-**Proyecto / Tarea / Práctica:**
+**Homework Title:**
 Pair Coding
 
-**Materia:**
+**Subject:**
 BDD-1704 SC9A Datos Masivos
 
-**Unidad:**
-Unidad I
+**Unit:**
+ I
 
-**Facilitador:**
+**Professor:**
 JOSE CHRISTIAN ROMERO HERNANDEZ
 
-**Alumno:**
+**Student:**
 Bojórquez Vargas Carlos Francisco
 16211977
 
-**Grupo:**
+**Group:**
 SC9A
 
-**Fecha:**
-Tijuana, Baja California a 09 de Octubre de 2020. 
+**Date:**
+Tijuana, Baja California, October 9, 2020. 
 </div>
 
 
-### ¿Qué es pair coding?
+### What is pair coding?
+Pair programming consists of two programs that share a single workstation (a screen, keyboard, and mouse between the pair). The programmer at the keyboard is usually called the "controller", the other, is also actively involved in the programming task, but is more focused on the general direction is the "browser"; Programmers are expected to switch roles every few minutes or so.
 
-La programación por parejas consta de dos programadores que comparten una única estación de trabajo (una pantalla, teclado y ratón entre la pareja). El programador en el teclado generalmente se llama el "controlador", el otro, también participa activamente en la tarea de programación, pero se centra más en la dirección general es el "navegador"; se espera que los programadores intercambien roles cada pocos minutos aproximadamente.
+**Common mistakes**
 
-**Errores comunes**
+● Both schedulers must actively participate in the task during a paired session; otherwise, no benefit can be expected.
+● At least the driver, and possibly both programmers, are expected to keep an active comment on what they are doing; Pair programming is also "programming out loud": if the driver is silent, the navigator must intervene.
+● Pair programming cannot be fruitfully imposed on people, especially if relationship problems, including more mundane ones (such as personal hygiene), get in the way; these must be resolved first.
 
-●	Ambos programadores deben participar activamente en la tarea durante una sesión emparejada; de lo contrario, no se puede esperar ningún beneficio.
-●	Se espera que al menos el conductor, y posiblemente ambos programadores, mantengan un comentario activo sobre lo que están haciendo; La programación en pareja también es "programar en voz alta": si el conductor está en silencio, el navegador debe intervenir.
-●	La programación en pareja no se puede imponer de manera fructífera a las personas, especialmente si los problemas de relación, incluidos los más mundanos (como la higiene personal), se interponen en el camino; se deben resolver estos primero.
+**Benefits**
 
-**Beneficios**
+● Better dissemination of knowledge among the team, particularly when a developer who is not familiar with a component is paired with one who knows it much better.
+● Better transfer of skills, as junior developers acquire micro-techniques or broader skills from more experienced team members.
+● Higher code quality: "Code out loud" leads to clearer articulation of the complexities and hidden details in coding tasks, reducing the risk of errors or falling into dead ends.
 
-●	Mejor difusión del conocimiento entre el equipo, en particular cuando un desarrollador que no está familiarizado con un componente se empareja con uno que lo conoce mucho mejor.
-●	Mejor transferencia de habilidades, ya que los desarrolladores junior adquieren micro-técnicas o habilidades más amplias de miembros del equipo con más experiencia.
-●	Mayor calidad del código: la "programación en voz alta" conduce a una articulación más clara de las complejidades y los detalles ocultos en las tareas de codificación, lo que reduce el riesgo de error o caídas en callejones sin salida.
+**Conclusion**
 
-**Conclusión**
+In my opinion, pair coding or pair programming is an effective method so that the skills or knowledge to be acquired when developing software is mutual. The objective of this practice is to share knowledge between both programmers, taking advantage of the fact that each one dominates different aspects when developing, in this way if one is not familiar with any function of the language this could be supported by his partner and in turn acquire a new skill. Another aspect that I managed to understand from this practice is that while you share knowledge with a development partner, you are learning how to make your code understandable not only for you, but also for other people who are going to edit / read it.
 
-En mi opinión, pair coding o programación en parejas sí es un método efectivo para que las habilidades o conocimiento que se va adquiriendo al desarrollar un software sea mutuo. El objetivo de esta práctica es el compartir conocimientos entre ambos programadores, aprovechando el hecho de que cada uno domina diferentes aspectos al desarrollar, de esta forma si uno no está familiarizado con alguna función del lenguaje este se podría apoyar de su compañero y a su vez adquirir una nueva habilidad. Otro aspecto que logré entender de esta práctica es que al mismo tiempo que compartes conocimiento con un compañero de desarrollo, vas aprendiendo como hacer que tu código sea entendible no solo para ti, si no para otras personas que vayan a editarlo/leerlo.
+On the other hand, I think that this practice would be much more efficient if there was contact in a classroom with the assigned classmate, since in this way the communication between the two will flow better in person than when communicating via social networks.
 
-Por otro lado, creo que esta práctica sería mucho más eficiente si se tuviera contacto en un aula con el compañero asignado, ya que de esta forma la comunicación entre ambos fluirá mejor en persona que al comunicarse vía redes sociales.
+**References**
 
-**Referencias**
+[1] Agile Alliance. (-). Pair Programming. October 9, 2020, de Agile Alliance Sitio web: https://www.agilealliance.org/glossary/pairing/#q=~(infinite~false~filters~(postType~(~'page~'post~'aa_book~'aa_event_session~'aa_experience_report~'aa_glossary~'aa_research_paper~'aa_video)~tags~(~'pair*20programming))~searchTerm~'~sort~false~sortDirection~'asc~page~1)
 
-[1] Agile Alliance. (-). Pair Programming. 09 de octubre de 2020, de Agile Alliance Sitio web: https://www.agilealliance.org/glossary/pairing/#q=~(infinite~false~filters~(postType~(~'page~'post~'aa_book~'aa_event_session~'aa_experience_report~'aa_glossary~'aa_research_paper~'aa_video)~tags~(~'pair*20programming))~searchTerm~'~sort~false~sortDirection~'asc~page~1)
+[2] Birgitta Böckeler. (2020). On Pair Programming. October 9, 2020, de Martin Fowler Sitio web: https://martinfowler.com/articles/on-pair-programming.html
 
-[2] Birgitta Böckeler. (2020). On Pair Programming. 09 de octubre de 2020, de Martin Fowler Sitio web: https://martinfowler.com/articles/on-pair-programming.html
-
-[3] ALEXANDRA ALTVATER. (2017). What is Pair Programming? Advantages, Challenges, Tutorials & More. 09 de octubre de 2020, de Stackify Sitio web: https://stackify.com/pair-programming-advantages/
+[3] ALEXANDRA ALTVATER. (2017). What is Pair Programming? Advantages, Challenges, Tutorials & More. October 9, 2020, de Stackify Sitio web: https://stackify.com/pair-programming-advantages/
