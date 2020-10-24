@@ -116,7 +116,9 @@ scala> ndf.select("Date", "Close").sort(desc("Close")).show(1)
 only showing top 1 row
 
 **9-. Escribe con tus propias palabras en un comentario de tu codigo. ¿Cuál es el significado de la columna Cerrar “Close”?**
-
+```scala
+//Indica el precio con el que cerro el año
+```
 
 **10 ¿Cuál es el máximo y mínimo de la columna “Volume”?**
 
