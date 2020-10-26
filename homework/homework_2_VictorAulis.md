@@ -34,52 +34,52 @@ Crhistian Romero Hernandez
 
 </div>
 
-¿Cuál es el coeficiente de correlación de Pearson?
+What is Pearson's correlation coefficient?
 --------------------------------------------------
 
-El Coeficiente de Correlación de Pearson es una medida de la correspondencia o relación lineal entre dos variables cuantitativas aleatorias. En palabras más simples se puede definir como un índice utilizado para medir el grado de relación que tienen dos variables, ambas cuantitativas.
+Pearson's Correlation Coefficient is a measure of the correspondence or linear relationship between two random quantitative variables. In simpler words, it can be defined as an index used to measure the degree of relationship between two variables, both quantitative.
 
-Teniendo dos variables, la correlación facilita que se hagan estimaciones del valor de una de ellas, con conocimiento del valor de la otra variable.
+Having two variables, the correlation facilitates estimations of the value of one of them, with knowledge of the value of the other variable.
 
-Este coeficiente es una medida que indica la situación relativa de los sucesos respecto a las dos variables, es decir, representa la expresión numérica que indica el grado de correspondencia o relación que existe entre las 2 variables. Estos números varían entre límites de +1 y -1.
+This coefficient is a measure that indicates the relative situation of the events with respect to the two variables, that is, it represents the numerical expression that indicates the degree of correspondence or relationship that exists between the 2 variables. These numbers vary between limits of +1 and -1.
 
-¿Cómo se calcula?
+How is it calculated?
 -----------------
 
-Para contar con una guía que permita:
+To have a guide that allows:
 
--   Establecer la variación contigua de las dos variables
+- Establish the contiguous variation of the two variables
 
--   Comparar los distintos casos entre sí
+- Compare the different cases with each other
 
-Para ello se hace uso del coeficiente de correlación de Pearson, definido como la covarianza que se da entre dos variables tipificadas y se calcula con la siguiente expresión:
+To do this, the Pearson correlation coefficient is used, defined as the covariance that occurs between two standardized variables and is calculated with the following expression:
 
 ![](https://lh6.googleusercontent.com/tL8OrJfhhQjTk6l8b8cNa4IVhzF6wh5QuUGqOE8RAL7F1CB53r_y0FExnvDZ9DNkPWsvz4iqK6lgnYVtJnMct2hpUZU6AnIw_pBfdGTbI8DrOcAXH0otfudutakYvSmFp74OTUNS)
 
-¿Cómo se interpreta el coeficiente de correlación de Pearson?
+How is Pearson's correlation coefficient interpreted?
 -------------------------------------------------------------
 
-Su dimensión indica el nivel de asociación entre las variables.
+Its dimension indicates the level of association between the variables.
 
--   Cuando es menor a cero (r < 0) Se dice que hay correlación negativa: Las variables se correlacionan en un sentido inverso.
+- When it is less than zero (r <0) It is said that there is a negative correlation: The variables are correlated in an inverse sense.
 
-A valores altos en una de las variables, le suelen corresponder valores bajos en la otra variable y viceversa. Cuánto el valor esté más próximo a -1 dicho coeficiente de correlación más evidente será la covariación extrema.
+High values ​​in one of the variables usually correspond to low values ​​in the other variable and vice versa. The closer the value is to -1 said correlation coefficient, the more evident the extreme covariation will be.
 
-Si r= -1 se habla de correlación negativa perfecta, la cual supone una determinación absoluta entre ambas variables, en sentido directo coexiste una relación lineal perfecta de pendiente negativa.
+If r = -1, we speak of a perfect negative correlation, which supposes an absolute determination between both variables, in a direct sense a perfect linear relationship with a negative slope coexists.
 
--   Cuando es mayor a cero (r > 0) Se dice que hay correlación positiva: Ambas variables se correlacionan en un sentido directo.
+- When it is greater than zero (r> 0) It is said that there is a positive correlation: Both variables are correlated in a direct sense.
 
-A valores altos en una de las variables, le corresponden valores altos en la otra variable e igualmente en una situación inversa sucede con los valores bajos. Cuánto más próximo a +1 se encuentre el coeficiente de correlación más evidente será la covariación.
+High values ​​in one of the variables correspond to high values ​​in the other variable, and in an inverse situation the same occurs with low values. The closer to +1 the correlation coefficient is, the more evident the covariation will be.
 
-Si r = 1 Se habla de correlación positiva perfecta, la cual supone una determinación absoluta entre las variables, en sentido directo coexiste una relación lineal perfecta de pendiente positiva).
+If r = 1 We speak of a perfect positive correlation, which supposes an absolute determination between the variables, in a direct sense a perfect linear relationship with a positive slope coexists).
 
--   Cuando es igual a cero (r = 0) Se dice que las variables están incorrectamente relacionadas, no puede es posible establecer algún sentido de covariación.
+- When it is equal to zero (r = 0) It is said that the variables are incorrectly related, it is not possible to establish some sense of covariation.
 
-No existe relación lineal, pero esto no implica necesariamente que las variables sean independientes, pudiendo existir relaciones no lineales entre las variables.
+There is no linear relationship, but this does not necessarily imply that the variables are independent, and there may be non-linear relationships between the variables.
 
-Cuando las dos variables son independientes se dice que no están correlacionadas, aunque el resultado de reciprocidad no es necesariamente cierto.
+When the two variables are independent they are said to be uncorrelated, although the reciprocity result is not necessarily true.
 
-Para concluir se puede decir que se ve más difícil de lo que resulta ser, sobre todo si se cuenta con tecnología avanzada, pues hoy día existen múltiples programas que facilitan esta labor de cálculo e interpretación del coeficiente de Pearson.
+To conclude, it can be said that it looks more difficult than it turns out, especially if you have advanced technology, since today there are multiple programs that facilitate this task of calculating and interpreting the Pearson coefficient.
 
 Fuente
 -------------------------------------------------------------
