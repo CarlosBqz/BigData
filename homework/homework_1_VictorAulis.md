@@ -32,45 +32,43 @@ Victor Jair Aulis Sanchez 17212836
 **MAESTRO**\
 Crhistian Romero Hernandez
 
-<div>
+</div>
 
-<div class="text-justify">
-
-¿Qué es el pair programming?
+What is pair programming?
 ----------------------------
 
-El método conocido como pair programming (en español, programación en pareja) se utiliza principalmente en el desarrollo ágil de software y, más concretamente, en la 
-programación extrema (XP). El pair programming especifica que siempre hay dos personas trabajando al mismo tiempo en el código y que, en la medida de lo posible, se 
-sienten juntas. Una se encarga de escribir el código y la otra de supervisar en tiempo real. Al mismo tiempo, están constantemente intercambiando impresiones: 
-debaten problemas, encuentran soluciones y desarrollan ideas creativas.
+The method known as pair programming is used mainly in agile software development and, more specifically, in
+extreme programming (XP). Pair programming specifies that there are always two people working on the code at the same time and that, as far as possible,
+feel together. One is in charge of writing the code and the other of monitoring in real time. At the same time, they are constantly exchanging impressions:
+they discuss problems, find solutions and develop creative ideas.
 
-Por lo general, a estos dos trabajadores se les asignan diferentes roles: el programador al que se le ha asignado el rol de piloto se encarga de escribir el código. 
-El programador al que se le ha asignado el rol de copiloto se encarga de supervisar ese código. Una de las reglas del pair programming establece que estos dos roles se 
-intercambien con regularidad (a intervalos cortos). De esta manera se evita una posible brecha jerárquica: se fomenta la igualdad entre ambos trabajadores y se consigue un i
-ntercambio fluido de roles.
+Typically, these two workers are assigned different roles: the programmer who has been assigned the pilot role is responsible for writing the code.
+The programmer who has been assigned the copilot role supervises that code. One of the rules of pair programming states that these two roles are
+exchange regularly (at short intervals). In this way, a possible hierarchical gap is avoided: equality between both workers is promoted and an i
+nfluent role swapping.
 
-**Buenas prácticas en el pair programming**
+**Good practices in pair programming**
 
-En la práctica, esta suele ser una colaboración entre dos desarrolladores con diferentes grados de experiencia: así, un trabajador con más experiencia puede transmitir 
-sus conocimientos a sus compañeros más jóvenes directamente a través de la práctica. Por su parte, es posible que a un trabajador más joven se le ocurren otras ideas, 
-quizá más innovadoras, que puede aportar al proyecto..
+In practice, this is usually a collaboration between two developers with different degrees of experience: thus, a more experienced worker can transmit
+your knowledge to your younger peers directly through practice. For his part, a younger worker may come up with other ideas,
+perhaps more innovative, which can contribute to the project..
 
-Ventajas y desventajas de la programación en pareja
+Advantages and disadvantages of pair programming
 ---------------------------------------------------
 
-El trabajo en pareja en el marco de un proyecto, tanto si se trata de la programación como de otro procedimiento, lleva consigo gran cantidad de ventajas. Por lo general, 
-cuatro ojos ven mucho más que solo dos: con el método pair programming se minimiza el riesgo de que se produzcan errores. Mientras una persona escribe el código, la otra lo 
-visualiza y se concentra tan solo en la búsqueda de errores. Por lo general, nos resulta bastante complicado detectar los propios errores. Suelen ser nuestros compañeros 
-quienes los detectan con más rapidez.
+Working as a couple within the framework of a project, whether it involves scheduling or another procedure, carries with it many advantages. As usual,
+four eyes see much more than just two: the pair programming method minimizes the risk of errors. While one person writes the code, the other person
+visualizes and concentrates only on finding errors. In general, it is quite difficult for us to detect the errors themselves. They are usually our companions
+who detect them more quickly.
 
-Otra de las grandes ventajas derivadas de la comunicación es el desarrollo constante de la creatividad: el constante intercambio que se produce entre la pareja de 
-programadores hace que surjan ideas que quizá no se tendrían si el trabajo fuese individual. La intercomunicación también garantiza que los problemas se puedan solucionar 
-mejor en menos tiempo. Pues, mientras una persona que trabaja sola puede sentirse satisfecha con la primera opción que mejor le parezca, las personas involucradas en el pair 
-programming siempre deben justificar sus decisiones ante el resto. Es posible que estas tengan otra percepción del problema y no estén satisfechas con la solución que se les 
-propone. Esto genera un debate en el que suelen presentarse nuevas ideas que derivan en un código mucho mejor.
+Another of the great advantages derived from communication is the constant development of creativity: the constant exchange that occurs between the couple of
+programmers bring up ideas that might not be had if the job were individual. Intercom also ensures that problems can be solved
+better in less time. Well, while a person who works alone may feel satisfied with the first option that seems best to him, the people involved in the pair
+programming should always justify their decisions to others. It is possible that they have another perception of the problem and are not satisfied with the solution that is given to them.
+proposes. This generates a debate in which new ideas are often presented that lead to a much better code.
 
 Fuentes
 
 https://www.ionos.mx/digitalguide/paginas-web/desarrollo-web/pair-programming/
 
-</div>
+
