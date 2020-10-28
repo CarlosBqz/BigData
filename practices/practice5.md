@@ -1,68 +1,68 @@
 ## Practice 5
  
  
-**1.- Para mostrar el Data Frame usamos esta función:**
+**1.- To show the Data Frame we use this function:**
 ```scala
 df.show()
 ```
-**2.- Podemos mostrar únicamente los nombres de las columnas del DataFrame:**
+**2.- We can show only the names of the columns of the DataFrame:**
 ```scala
 df.columns
 ```
-**3.- También podemos mostrar sólo las columnas existentes e información sobre las mismas:**
+**3.- We can also show only the existing columns and information about them:**
 ```scala
 df.printSchema()
 ```
-**4.- Para mostrar un nuevo DataFrame con la selección de las variables nombre y edad:**
+**4.- To display a new DataFrame with the selection of the variables name and age:**
 ```scala
 df.select("nombre","edad").show()
 ```
-**5.-También os comentamos antes que se poseen las mismas ventajas que los RDD, como por ejemplo, podemos aplicar un filtro sobre este DataFrame. En este caso para filtrar los niños (children) que tengan menos de 13 años y que nos muestre esos elementos:**
+**5.- We also mentioned before that they have the same advantages as RDDs, such as, for example, we can apply a filter on this DataFrame. In this case, to filter the children who are under 13 years old and show us those elements:**
 ```scala
 val children = df.filter($."edad" < 13)
 children.show
 ```
-**6.-Se pueden hacer muchas más operaciones, como por ejemplo mostrar el número de elementos que contiene el DataFrame:**
+**6.- You can do many more operations, such as displaying the number of elements that the DataFrame contains:**
 ```scala
 df.count()
 ```
-**7.- También mostrar los tres primeros elementos del DataFrame:**
+**7.- Also show the first three elements of the DataFrame:**
 ```scala
 df.head(3)
 ```
-**8.- Eliminar datos nulos del data frame:**
+**8.- Remove null data from data frame:**
 ```scala
 df.na.drop()
 ```
-**9.- Ordena la columna de salario y calcula la suma acumulada:**
+**9.- Sort the salary column and calculate the accumulated sum:**
 ```scala
 orderBy()
 ```
-**10.- Orden descendiente**
+**10.- Descending order:**
 ```scala
 desc ("salario")
 ```
-**11.- Muestra un ejemplo que calcula la covarianza sobre un conjunto de datos**
+**11.- Show an example that calculates the covariance over a data set:**
 ```scala
 df.stat.cov("edad", "salario")
 ```
-**12.- Muestra un ejemplo de identificar el valor mínimo sobre un conjunto de datos**
+**12.- Show an example of identifying the minimum value over a data set:**
 ```scala
 df.select(min("edad")).show()
 ```
-**13.- Muestra un ejemplo de identificar el valor máximo sobre un conjunto de datos**
+**13.- Shows an example of identifying the maximum value over a data set:**
 ```scala
 df.select(max("edad")).show()
 ```
-**14.- Muestra un ejemplo que calcula la correlación sobre un conjunto de datos**
+**14.- Shows an example that calculates the correlation on a data set:**
 ```scala
 df.stat.corr("edad", "salario")
 ```
-**15.- Muestra un ejemplo de cómo realizar la suma sobre un conjunto de datos**
+**15.- Show an example of how to perform addition over a data set:**
 ```scala
 df.select(sum("edad")).show()
 ```
-**16.- Muestra un ejemplo de cómo realizar la media en un conjunto de datos**
+**16.- Show an example of how to average a data set**
 ```scala
 df.select(avg("edad")).show()
 ```
