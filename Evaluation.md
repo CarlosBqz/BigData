@@ -122,9 +122,9 @@ only showing top 1 row
 ```scala
 scala> ndf.agg(min("Close"), max("Close")).show()
 ```
-|min(Close)|max(Close)|
-|----------|----------|
-|      53.8|707.610001|
+|min(Volume)|max(Volume)|
+------------|-----------|
+|    3531300|  315541800|
 
 **11.Con Sintaxis Scala/Spark $ conteste los siguiente:**
 ◦ Hint: Basicamente muy parecido a la session de dates, tendran que crear otro dataframe para contestar algunos de los incisos.
