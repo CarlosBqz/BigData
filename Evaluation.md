@@ -114,13 +114,13 @@ only showing top 1 row
 
 **9-. Escribe con tus propias palabras en un comentario de tu codigo. ¿Cuál es el significado de la columna Cerrar “Close”?**
 ```scala
-//Indica el precio con el que cerro el año
+//Indica el precio con el que cerro el dia
 ```
 
 **10 ¿Cuál es el máximo y mínimo de la columna “Volume”?**
 
 ```scala
-scala> ndf.agg(min("Close"), max("Close")).show()
+scala> ndf.agg(min("Volume"), max("Volume")).show()
 ```
 |min(Volume)|max(Volume)|
 ------------|-----------|
