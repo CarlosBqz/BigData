@@ -1,28 +1,34 @@
-**1-. comienza una simple sesion en spark**
+**1-. Start a simple session in spark**
 
 Import the following library to start a spark session
 ```scala
 import org.apache.spark.sql.SparkSession
 import org.apache.spark.sql.functions._
 ```
-Declare the variable spark for initialize the session
+Declare the variable spark to initialize the session, this will allow us to work with data frames using sql syntax.
 
 ```scala
 val spark = SparkSession.builder().getOrCreate()
 ```
-**2-. cargue el archivo Netflix Stock CSV, haga que Spark infiera los tipos de datos.**
+**2-. Upload Netflix Stock CSV file, make Spark infer data types.**
+
+To load the csv we use the following method, indicating that there is a header and providing the path of the file.
 ```scala
 //Load the csv
 val ndf = spark.read.option("header", "true").option("inferSchema","true")csv("C:\\Users\\Carlos Bojorquez\\Desktop\\Evaluacion_Unidad 1_Scala\\Netflix_2011_2016.csv")
 ```
-**3-. ¿Cuáles son los nombres de las columnas?**
+**3-. What are the column names?**
+
+To get the names of the columns of a csv, we used the columns method, this will throw an array that contains all the headers of the data frame.
 ```scala
 //Name of the columns
 ndf.columns
 res4: Array[String] = Array(Date, Open, High, Low, Close, Volume, Adj Close)
 ```
 
-**4-. ¿Cómo es el esquema?**
+**4-. How is the scheme?**
+
+To print the data frame schema, we used the printSchema() method. This method will throw a list that shows the type of data that contains the csv.
 ```scala
 ndf.printSchema()
 
@@ -37,7 +43,9 @@ root
  |-- Adj Close: string (nullable = true)
 ```
 
-**5-. Imprime las primeras 5 columnas.**
+**5-. Print the first 5 columns.**
+
+To print the first five columns, we used the select method, writing the name of the first five columns and showing just one record of the csv.
 ```scala
 scala> ndf.select("Date", "Open", "High", "Low", "Close").show(1)
 ```
@@ -49,8 +57,14 @@ scala> ndf.select("Date", "Open", "High", "Low", "Close").show(1)
 
 only showing top 1 row
 
-**6-. Usa describe () para aprender sobre el DataFrame.**
-Using the describe function, this function calculate different things 
+**6-. Use describe () to learn about the DataFrame.**
+Using the describe function, this function calculate different things:
+- Count: this is the total of rows that the csv contains.
+- Mean: this show the mean of all the columns.
+- Stddev: this show the standard deviation of all the columns.
+- Min: shows the minimum value in the column.
+- Max: shows the maximum value in the column.
+
 ```scala
 scala> ndf.describe().show()
 ```
@@ -64,14 +78,16 @@ scala> ndf.describe().show()
 | max     | 2016-10-24 | 99.970001          | 99.93              | 99.860001          | 99.889999          | 9991800              | 99.889999          |
 
 
-**7-. Crea un nuevo dataframe con una columna nueva llamada “HV Ratio” que es la relación entre el precio de la columna “High” frente a la columna “Volume” de acciones negociadas por un día.**
+**7-. Create a new dataframe with a new column called “HV Ratio” which is the relationship between the price in the “High” column versus the “Volume” column of shares traded for a day.**
 
+To create a new data frame containing an extra column, we have to use the withColumn() method, this method will ask us to write the name of the column and the value that will contain. The exercise says that the name of the column is "HV Ratio" and the values are the columns High divided by the column Volume.
 ```scala
 //(Hint: Es una operación de columnas).
 ndf.select($"High"/$"Volume").show()
 
 val df7 = ndf.withColumn("HV Ratio", col("High")/col("Volume"))
 
+//Printing the dataframe df7, we can appreciate the extra column at the end of the table.
 scala> df7.show()
 ```
 
@@ -101,7 +117,7 @@ scala> df7.show()
 only showing top 20 rows
 
 **8-. ¿Qué día tuvo el pico mas alto en la columna “Close”?**
-
+To only get the day and the close column, we used the select method, we indicated that we only want to show those two columns. After that we sort the data in a descending way to show the maximum value and applying the show method to just show the top of the table.
 ```scala
 scala> ndf.select("Date", "Close").sort(desc("Close")).show(1)
 ```
@@ -112,12 +128,14 @@ scala> ndf.select("Date", "Close").sort(desc("Close")).show(1)
 
 only showing top 1 row
 
-**9-. Escribe con tus propias palabras en un comentario de tu codigo. ¿Cuál es el significado de la columna Cerrar “Close”?**
+**9-. Write in your own words in a comment of your code. What is the meaning of the Close column "Close"?**
 ```scala
-//Indica el precio con el que cerro el dia
+//Analyzing the data frame column by column, we can understand that open means the value of a netflix action at the start of the day, the column high means the top value that an action got that day and the column low its the lowest value. Knowing that, we can say that the close column means the value of a netflix action at the end of the day.
 ```
 
-**10 ¿Cuál es el máximo y mínimo de la columna “Volume”?**
+**10 What is the maximum and minimum of the “Volume” column?**
+
+To get the maximum and minimum of a column, we used the "agg" function, this function allow us to use the "min" and "max" method, those methods calculate the minimum and maximum values of the column respectively. To use the method we need to specify the name of the column that we want to calculate his minimum and maximum values.
 
 ```scala
 scala> ndf.agg(min("Volume"), max("Volume")).show()
@@ -126,10 +144,15 @@ scala> ndf.agg(min("Volume"), max("Volume")).show()
 ------------|-----------|
 |    3531300|  315541800|
 
-**11.Con Sintaxis Scala/Spark $ conteste los siguiente:**
+**11. With Syntax Scala / Spark $ answer the following:**
 ◦ Hint: Basicamente muy parecido a la session de dates, tendran que crear otro dataframe para contestar algunos de los incisos.
 
-**a. ¿Cuántos días fue la columna “Close” inferior a $ 600?**
+**a. How many days was the “Close” column less than $ 600?**
+
+To get the values of the close column that are below 600, we applied a filter to the csv. To do it, we use the filter method specifying the condition that will follow the data frame.
+
+Before creating a new data frame with the filter, first we sort the result in a descending way, this will allow us to see if the maximum value of the close column its below 600.
+
 ```scala
 ndf.filter($"Close" < 600).sort(desc("Close")).show()
 scala> ndf.filter($"Close" < 600).sort(desc("Close")).show()
@@ -159,15 +182,21 @@ scala> ndf.filter($"Close" < 600).sort(desc("Close")).show()
 
 only showing top 20 rows
 
+After that, we create a new data frame with the filter.
+
 ```Scala
 val a11 =  ndf.filter($"Close" < 600)
 
 a11.sort(desc("Close"))
 
+//And we use the count method to show the total of rows where close is below 600.
 a11.count
 Long = 1218
 ```
-**b. ¿Qué porcentaje del tiempo fue la columna “High” mayor que $ 500?**
+**b. What percentage of the time was the “High” column greater than $ 500?**
+
+To get the percentage of time that the column high was over 500. First, we create a new data frame named b11, where the values in the column high are above 500. Then we create a variable type double named b11percent, we have to strictly specify it as double because we are working with numbers that are in decimal. After that, we give the value of the total rows in the filtred data of b11 divided by the total rows in the csv, then we multiply it by 100. To get the total rows of the data frames we are using the count method and also the toDouble method, in that way the int that provides the count method will be converted to Double.
+
 ```scala
 val b11 =  ndf.filter($"High" > 500)
 b11.sort(asc("High")).show()
@@ -175,7 +204,10 @@ var b11percent: Double = (b11.count.toDouble/ndf.count.toDouble)*100
 
 b11percent: Double = 4.924543288324067	
 ```
-**c. ¿Cuál es la correlación de Pearson entre columna “High” y la columna “Volumen”?**
+**c. What is the Pearson correlation between column "High" and column "Volume"?**
+
+To calculate the Pearson Correlation of the column High over the column Volume, we are using the select method to show only the result and the corr method to calculate the correlation, specifying the columns High and Volume in it.
+
 ```scala
 scala> ndf.select(corr($"High",$"Volume")).show()
 ```
@@ -183,7 +215,10 @@ scala> ndf.select(corr($"High",$"Volume")).show()
 |--------------------|
 |-0.20960233287942157|
 
-**d. ¿Cuál es el máximo de la columna “High” por año?**
+**d. What is the maximum in the “High” column per year?**
+
+First of all we use a groupBy to group the data in years, then using the "agg" function that allow us to access to the "max" method specifying that we are looking for the maximum value of the High column, after that we sort the data by years just to have an order in the result.
+
 ```scala
 ndf.groupBy(year($"Date")).agg(max($"High")).sort(year($"Date")).show()
 ```
@@ -196,7 +231,9 @@ ndf.groupBy(year($"Date")).agg(max($"High")).sort(year($"Date")).show()
 |      2015|        716.159996|
 |      2016|129.28999299999998|
 
-**e. ¿Cuál es el promedio de columna “Close” para cada mes del calendario?**
+**e. What is the “Close” column average for each calendar month?**
+
+Firstly, we used a groupBy to group the data in months, secondly using the "agg" function that allow us to access to the "max" method specifying that we are looking for the maximum value of the Close column, after that we sort the data frame by months just to have an order in the result.
 
 ```scala
 ndf.groupBy(month($"Date")).agg(mean($"Close")).sort(month($"Date")).show()
