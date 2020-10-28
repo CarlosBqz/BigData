@@ -1,3 +1,47 @@
+<div align="center">
+
+**Instituto Tecnológico de Tijuana**
+
+Departamento de Ciencias y Computación
+
+Ingeniería en Sistemas Computacionales
+ 
+ [![](https://upload.wikimedia.org/wikipedia/commons/2/2e/ITT.jpg)](https://upload.wikimedia.org/wikipedia/commons/2/2e/ITT.jpg)
+
+**Title:**
+
+Evaluation Unit 1
+
+**Subject:**
+
+BDD-1704 SC9A Datos Masivos
+
+**Unit:**
+
+I
+
+**Professor:**
+
+JOSE CHRISTIAN ROMERO HERNANDEZ
+
+**Student:**
+
+Victor Jair Aulis Sanchez 
+17212836
+
+Bojórquez Vargas Carlos Francisco
+16211977
+
+**Group:**
+
+SC9A
+
+**Date:**
+
+Tijuana, Baja California, October 9, 2020. 
+</div>
+
+
 **1-. Start a simple session in spark**
 
 Import the following library to start a spark session
@@ -58,6 +102,7 @@ scala> ndf.select("Date", "Open", "High", "Low", "Close").show(1)
 only showing top 1 row
 
 **6-. Use describe () to learn about the DataFrame.**
+
 Using the describe function, this function calculate different things:
 - Count: this is the total of rows that the csv contains.
 - Mean: this show the mean of all the columns.
@@ -117,6 +162,7 @@ scala> df7.show()
 only showing top 20 rows
 
 **8-. ¿Qué día tuvo el pico mas alto en la columna “Close”?**
+
 To only get the day and the close column, we used the select method, we indicated that we only want to show those two columns. After that we sort the data in a descending way to show the maximum value and applying the show method to just show the top of the table.
 ```scala
 scala> ndf.select("Date", "Close").sort(desc("Close")).show(1)
@@ -130,7 +176,9 @@ only showing top 1 row
 
 **9-. Write in your own words in a comment of your code. What is the meaning of the Close column "Close"?**
 ```scala
-//Analyzing the data frame column by column, we can understand that open means the value of a netflix action at the start of the day, the column high means the top value that an action got that day and the column low its the lowest value. Knowing that, we can say that the close column means the value of a netflix action at the end of the day.
+//Analyzing the data frame column by column, we can understand that open means the value of a netflix action at the start of the day, 
+//the column high means the top value that an action got that day and the column low its the lowest value. Knowing that, 
+//we can say that the close column means the value of a netflix action at the end of the day.
 ```
 
 **10 What is the maximum and minimum of the “Volume” column?**
@@ -145,7 +193,6 @@ scala> ndf.agg(min("Volume"), max("Volume")).show()
 |    3531300|  315541800|
 
 **11. With Syntax Scala / Spark $ answer the following:**
-◦ Hint: Basicamente muy parecido a la session de dates, tendran que crear otro dataframe para contestar algunos de los incisos.
 
 **a. How many days was the “Close” column less than $ 600?**
 
