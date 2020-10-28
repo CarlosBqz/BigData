@@ -169,8 +169,8 @@ Long = 1218
 ```
 **b. ¿Qué porcentaje del tiempo fue la columna “High” mayor que $ 500?**
 ```scala
-val b11 =  ndf.filter($"Open" > 500)
-b11.sort(asc("Open")).show()
+val b11 =  ndf.filter($"High" > 500)
+b11.sort(asc("High")).show()
 var b11percent: Double = (b11.count.toDouble/ndf.count.toDouble)*100
 
 b11percent: Double = 4.924543288324067	
