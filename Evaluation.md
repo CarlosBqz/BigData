@@ -38,7 +38,7 @@ SC9A
 
 **Date:**
 
-Tijuana, Baja California, October 9, 2020. 
+Tijuana, Baja California, October 28, 2020. 
 </div>
 
 
