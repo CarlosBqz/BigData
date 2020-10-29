@@ -24,7 +24,7 @@ I
 
 JOSE CHRISTIAN ROMERO HERNANDEZ
 
-**Student:**
+**Students:**
 
 Victor Jair Aulis Sanchez 
 17212836
@@ -161,7 +161,7 @@ scala> df7.show()
 
 only showing top 20 rows
 
-**8-. ¿Qué día tuvo el pico mas alto en la columna “Close”?**
+**8-. Which day had the highest peak in the “Close” column?**
 
 To only get the day and the close column, we used the select method, we indicated that we only want to show those two columns. After that we sort the data in a descending way to show the maximum value and applying the show method to just show the top of the table.
 ```scala
@@ -242,7 +242,7 @@ Long = 1218
 ```
 **b. What percentage of the time was the “High” column greater than $ 500?**
 
-To get the percentage of time that the column high was over 500. First, we create a new data frame named b11, where the values in the column high are above 500. Then we create a variable type double named b11percent, we have to strictly specify it as double because we are working with numbers that are in decimal. After that, we give the value of the total rows in the filtred data of b11 divided by the total rows in the csv, then we multiply it by 100. To get the total rows of the data frames we are using the count method and also the toDouble method, in that way the int that provides the count method will be converted to Double.
+To get the percentage of time that the column high was over 500. First, we create a new data frame named b11, where the values in the column high are above 500. Then we create a variable type double named b11percent, we have to strictly specify it as double because we are working with numbers that are in decimal. After that, we give the value of the total rows in the filtered data of b11 divided by the total rows in the csv, then we multiply it by 100. To get the total rows of the data frames we are using the count method and also the toDouble method, in that way the int that provides the count method will be converted to Double.
 
 ```scala
 val b11 =  ndf.filter($"High" > 500)
