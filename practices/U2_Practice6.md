@@ -1,5 +1,4 @@
 # Practice 6: MULTI LAYER PERCEPTRON CLASSIFIER EXERCIST
-### Complete the commented tasks
 
 ##### 1. Import MultilayerPerceptron
 ```scala
