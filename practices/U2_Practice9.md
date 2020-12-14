@@ -1,4 +1,4 @@
-# Practice 7: NAIVE BAYES
+# Practice 9: NAIVE BAYES
 #### 1. Importing libraries.
 ```scala
 import org.apache.spark.ml.classification.NaiveBayes
