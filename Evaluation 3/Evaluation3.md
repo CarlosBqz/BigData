@@ -43,62 +43,62 @@ Tijuana, Baja California, December 18, 2020. 
 
 
 ## Instructions
-Instrucciones
-Desarrolle las siguientes instrucciones en Spark con el lenguaje de programación Scala.
+Instructions
+Develop the following instructions in Spark with the Scala programming language.
 
-Objetivo:
-El objetivo de este examen practico es tratar de agrupar los clientes de regiones específicas de un distribuidor al mayoreo. Esto en base a las ventas de algunas categorías de productos.
+Objective:
+The goal of this hands-on test is to try to group customers from specific regions of a wholesaler. This based on the sales of some product categories.
 
-Las fuente de datos se encuentra en el repositorio:
+The data sources are in the repository:
 https://github.com/jcromerohdz/BigData/blob/master/Spark_clustering/Wholesale%20customers%20data.csv
 
-1. Importar una simple sesión Spark.
-2. Utilice las lineas de código para minimizar errores
-3. Cree una instancia de la sesión Spark
-4. Importar la librería de Kmeans para el algoritmo de agrupamiento.
-5. Carga el dataset de Wholesale Customers Data
-6. Seleccione las siguientes columnas: Fresh, Milk, Grocery, Frozen, Detergents_Paper, Delicassen y llamar a este conjunto feature_data
-7. Importar Vector Assembler y Vector
-8. Crea un nuevo objeto Vector Assembler para las columnas de caracteristicas como un conjunto de entrada, recordando que no hay etiquetas
-9. Utilice el objeto assembler para transformar feature_data
-10. Crear un modelo Kmeans con K=3
-11. Evalúe  los grupos utilizando Within Set Sum of Squared Errors WSSSE e imprima los centroides.
+1. Import a simple Spark session.
+2. Use lines of code to minimize errors
+3. Create an instance of the Spark session
+4. Import the K library means for the clustering algorithm.
+5. Load the wholesale customer data dataset
+6. Select the following columns: Fresh, Milk, Grocery, Frozen, Detergents_Paper, Delicassen and call this set feature_data
+7. Import Vector Assembler and Vector
+8. Create a new Vector Assembler object for the feature columns as an input set, remembering that there are no labels
+9. Use the assembler object to transform feature_data
+10. Create a Kmeans model with K = 3
+11. Evaluate the groups using within the WSSSE Sum of Squared Errors set and print the centroids.
 
 ## Development
 
-1. Importar una simple sesión Spark.
+1. Import a simple Spark session.
 
 ```scala
 import org.apache.spark.sql.SparkSession
 ```
 
-2. Utilice las lineas de código para minimizar errores
+2. Use lines of code to minimize errors
 
 ```scala
 import org.apache.log4j._
 Logger.getLogger("org").setLevel(Level.ERROR)
 ```
 
-3. Cree una instancia de la sesión Spark
+3. Create an instance of the Spark session
 
 ```scala
 val spark = SparkSession.builder().appName("LinearRegressionAssigment").getOrCreate()
 ```
 
-4. Importar la librería de Kmeans para el algoritmo de agrupamiento.
+4. Import the K library means for the clustering algorithm.
 
 ```scala
 import org.apache.spark.ml.clustering.KMeans
 ```
 
-5. Carga el dataset de Wholesale Customers Data
+5. Load the wholesale customer data dataset
 
 ```scala
 val data = spark.read.option("header", "true").option("inferSchema","true")csv("C:\\Users\\Carlos Bojorquez\\Desktop\\Noveno semestre\\Datos Masivones\\BigData\\Spark_clustering\\Wholesale_customers_data.csv")
 
 ```
 
-6. Seleccione las siguientes columnas: Fresh, Milk, Grocery, Frozen, Detergents_Paper, Delicassen y llamar a este conjunto feature_data
+6. Select the following columns: Fresh, Milk, Grocery, Frozen, Detergents_Paper, Delicassen and call this set feature_data
 
 ```scala
 val  fd  = data.select("Fresh","Milk","Grocery","Frozen","Detergents_Paper","Delicassen")
@@ -106,20 +106,20 @@ fd.show(5)
 ```
 [![](https://lh3.googleusercontent.com/pw/ACtC-3dWRGCMqma-wmjDiL9SuBaBL0t9_U5dffqKpQlZHCZZARj-SgqGxi_s7vCNa4sZQP88JZEgWZ8TBTocbs82kxNNu6JsFF3dU9wS14K_0an0DN_s_tYYn_25KBHyCIDhjQEXyL39f9XCyCWa1fThATeR=w508-h214-no?authuser=1)](FD)
 
-7. Importar Vector Assembler y Vector
+7. Import Vector Assembler and Vector
 
 ```scala
 import org.apache.spark.ml.feature.VectorAssembler
 import org.apache.spark.ml.linalg.Vector
 ```
 
-8. Crea un nuevo objeto Vector Assembler para las columnas de caracteristicas como un conjunto de entrada, recordando que no hay etiquetas
+8. Create a new Vector Assembler object for the feature columns as an input set, remembering that there are no labels
 
 ```scala
 val assembler = new VectorAssembler() .setInputCols(Array("Fresh","Milk","Grocery","Frozen","Detergents_Paper","Delicassen")).setOutputCol("features")
 ```
 
-9. Utilice el objeto assembler para transformar feature_data
+9. Use the assembler object to transform feature_data
 
 ```scala
 val features = assembler.transform(fd)
@@ -127,7 +127,7 @@ features.show(5)
 ```
 [![](https://lh3.googleusercontent.com/pw/ACtC-3eIuK0K19X_KkQo5adC1hprzXwbmHAgQtPX78dV4mEgf_M484llbhyrt22viOVp6e8W08AEIH1ioO8hZKEYiaBaw9MuLce8IxonhI8W4amBKiodreeQcSuCrY9SXJFCjDfX3FTsgxNyN-PkCHwHik3u=w691-h209-no?authuser=1)](Features)
 
-10. Crear un modelo Kmeans con K=3
+10. Create a Kmeans model with K = 3
 
 ```scala
 val kmeans = new KMeans().setK(3).setMaxIterations(5)
@@ -135,7 +135,7 @@ val model = kmeans.fit(features)
 val model: KMeansModel = kmeans.fit(features)
 ```
 
-11. Evalúe  los grupos utilizando Within Set Sum of Squared Errors WSSSE e imprima los centroides.
+11. Evaluate the groups using within the WSSSE Sum of Squared Errors set and print the centroids.
 
 ```scala
 val WSSSE = model.computeCost(features)
