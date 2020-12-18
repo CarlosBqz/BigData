@@ -52,17 +52,17 @@ The goal of this hands-on test is to try to group customers from specific region
 The data sources are in the repository:
 https://github.com/jcromerohdz/BigData/blob/master/Spark_clustering/Wholesale%20customers%20data.csv
 
-1. Import a simple Spark session.
-2. Use lines of code to minimize errors
-3. Create an instance of the Spark session
-4. Import the K library means for the clustering algorithm.
-5. Load the wholesale customer data dataset
-6. Select the following columns: Fresh, Milk, Grocery, Frozen, Detergents_Paper, Delicassen and call this set feature_data
-7. Import Vector Assembler and Vector
-8. Create a new Vector Assembler object for the feature columns as an input set, remembering that there are no labels
-9. Use the assembler object to transform feature_data
-10. Create a Kmeans model with K = 3
-11. Evaluate the groups using within the WSSSE Sum of Squared Errors set and print the centroids.
+- Import a simple Spark session.
+- Use lines of code to minimize errors
+- Create an instance of the Spark session
+- Import the K library means for the clustering algorithm.
+- Load the wholesale customer data dataset
+- Select the following columns: Fresh, Milk, Grocery, Frozen, Detergents_Paper, Delicassen and call this set feature_data
+- Import Vector Assembler and Vector
+- Create a new Vector Assembler object for the feature columns as an input set, remembering that there are no labels
+- Use the assembler object to transform feature_data
+- Create a Kmeans model with K = 3
+- Evaluate the groups using within the WSSSE Sum of Squared Errors set and print the centroids.
 
 ## Development
 
