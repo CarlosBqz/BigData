@@ -132,7 +132,6 @@ features.show(5)
 ```scala
 val kmeans = new KMeans().setK(3).setMaxIterations(5)
 val model = kmeans.fit(features)
-val model: KMeansModel = kmeans.fit(features)
 ```
 
 11. Evaluate the groups using within the WSSSE Sum of Squared Errors set and print the centroids.
