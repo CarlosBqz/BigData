@@ -88,7 +88,7 @@ Logger.getLogger("org").setLevel(Level.ERROR)
 val spark = SparkSession.builder().appName("LinearRegressionAssigment").getOrCreate()
 ```
 
-4. Import the K library means for the clustering algorithm.
+4. Import the K-means library for the clustering algorithm.
 
 ```scala
 import org.apache.spark.ml.clustering.KMeans
