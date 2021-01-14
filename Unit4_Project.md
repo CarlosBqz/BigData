@@ -507,129 +507,47 @@ println(durationSeconds)
 
 #### Decision Tree
 
-Attempt #
-Time (s)
-Accuracy (%)
-Error (%)
-Algorithm
-1
-18
-88.52
-11.47
-Decision Tree
-2
-22
-89.18
-10.81
-Decision Tree
-3
-21
-89.69
-10.3
-Decision Tree
-4
-22
-87.91
-12.08
-Decision Tree
-5
-20
-88.42
-11.57
-Decision Tree
-6
-19
-88.09
-11.9
-Decision Tree
-7
-18
-86.87
-13.12
-Decision Tree
-8
-21
-89.15
-10.84
-Decision Tree
-9
-22
-87.88
-12.11
-Decision Tree
-10
-29
-88.15
-11.84
-Decision Tree
-Average
-21.2
-88.386
-11.604
-Decision Tree
+| Attempt | Time (s) | Accuracy (%) | Error (%) | Algorithm     |
+| ------- | -------- | ------------ | --------- | ------------- |
+| 1       | 18       | 88.52        | 11.47     | Decision Tree |
+| 2       | 22       | 89.18        | 10.81     | Decision Tree |
+| 3       | 21       | 89.69        | 10.3      | Decision Tree |
+| 4       | 22       | 87.91        | 12.08     | Decision Tree |
+| 5       | 20       | 88.42        | 11.57     | Decision Tree |
+| 6       | 19       | 88.09        | 11.9      | Decision Tree |
+| 7       | 18       | 86.87        | 13.12     | Decision Tree |
+| 8       | 21       | 89.15        | 10.84     | Decision Tree |
+| 9       | 22       | 87.88        | 12.11     | Decision Tree |
+| 10      | 29       | 88.15        | 11.84     | Decision Tree |
+
+| Average       |
+| ------------ -| 
+| 21.2          |
+| 88.386        |
+| 11.604        |
+| Decision Tree |
 *Todos los tests se llevaron a cabo de manera individual
 
 #### Multilayer Perceptron
-Attempt #
-Time (s)
-Accuracy (%)
-Error (%)
-Algorithm
-1
-21
-88.61
-11.38
-Multilayer Perceptron
-2
-19
-88.9
-11.09
-Multilayer Perceptron
-3
-23
-89.7
-10.29
-Multilayer Perceptron
-4
-21
-88.64
-11.35
-Multilayer Perceptron
-5
-21
-86.86
-13.13
-Multilayer Perceptron
-6
-29
-88.32
-11.67
-Multilayer Perceptron
-7
-23
-88.21
-11.78
-Multilayer Perceptron
-8
-27
-88.51
-11.48
-Multilayer Perceptron
-9
-27
-89.48
-10.51
-Multilayer Perceptron
-10
-24
-87.24
-12.75
-Multilayer Perceptron
-Average
-23.5
-88.447
-11.543
-Multilayer Perceptron
+| Attempt | Time (s) | Accuracy (%) | Error (%) | Algorithm             |
+| ------- | -------- | ------------ | --------- | --------------------- |
+| 1       | 21       | 88.61        | 11.38     | Multilayer Perceptron |
+| 2       | 19       | 88.9         | 11.09     | Multilayer Perceptron |
+| 3       | 23       | 89.7         | 10.29     | Multilayer Perceptron |
+| 4       | 21       | 88.64        | 11.35     | Multilayer Perceptron |
+| 5       | 21       | 86.86        | 13.13     | Multilayer Perceptron |
+| 6       | 29       | 88.32        | 11.67     | Multilayer Perceptron |
+| 7       | 23       | 88.21        | 11.78     | Multilayer Perceptron | 
+| 8       | 27       | 88.51        | 11.48     | Multilayer Perceptron |
+| 9       | 27       | 89.48        | 10.51     | Multilayer Perceptron |
+| 10      | 24       | 87.24        | 12.75     | Multilayer Perceptron |
+
+| Average               |
+| --------------------- |
+| 23.5                  | 
+| 88.447                |
+| 11.543                |
+| Multilayer Perceptron |
 *Todos los tests se llevaron a cabo de manera individual
 
 ## Conclusions
