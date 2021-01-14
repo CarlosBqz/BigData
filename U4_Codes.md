@@ -1,5 +1,5 @@
 ## SVM
-
+```scala
 //Start timer
 val startTimeMillis = System.currentTimeMillis()
 
@@ -73,10 +73,10 @@ val durationSeconds = (endTimeMillis - startTimeMillis) / 1000
 
 //Print the time in seconds that took the whole algorithm to compile
 println(durationSeconds)
-
+```
 
 ## Decision Tree 
-
+```scala
 //Start timer
 val startTimeMillis = System.currentTimeMillis()
 
@@ -158,10 +158,10 @@ val durationSeconds = (endTimeMillis - startTimeMillis) / 1000
 
 //Print the time in seconds that took the whole algorithm to compile
 println(durationSeconds)
-
+```
 
 ## Logistic Regression
-
+```scala
 //Start timer
 val startTimeMillis = System.currentTimeMillis()
 
@@ -229,10 +229,11 @@ val durationSeconds = (endTimeMillis - startTimeMillis) / 1000
 
 //Print the time in seconds that took the whole algorithm to compile
 println(durationSeconds)
-
+```
 
 ## Multilayer Perceptron
 
+```scala
 //Start timer
 val startTimeMillis = System.currentTimeMillis()
 
@@ -299,3 +300,4 @@ val durationSeconds = (endTimeMillis - startTimeMillis) / 1000
 
 //Print the time in seconds that took the whole algorithm to compile
 println(durationSeconds)
+```
