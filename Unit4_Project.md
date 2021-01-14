@@ -91,6 +91,7 @@ Apache Spark es un framework de programación para procesamiento de datos distri
 Scala es un lenguaje de programación moderno multi-paradigma diseñado para expresar patrones de programación comunes de una forma concisa, elegante, y con tipado seguro. Integra fácilmente características de lenguajes orientados a objetos y funcionales. [8]
 
 ##### A continuación presentaremos todas las librerías necesarias para desarrollar los algoritmos SVM, Logistic Regression, Decision Trees y Multilayer Perceptron:
+```scala
 import org.apache.spark.ml.classification.LinearSVC
 import org.apache.spark.ml.Pipeline
 import org.apache.spark.ml.classification.DecisionTreeClassifier
@@ -106,8 +107,9 @@ import org.apache.spark.ml.evaluation.MulticlassClassificationEvaluator
 import org.apache.spark.ml.classification.MultilayerPerceptronClassifier
 import org.apache.spark.ml.feature.StringIndexer
 import org.apache.spark.ml.feature.VectorAssembler
-
+```
 #### Código para aplicar SVM al dataset bank.csv:
+```scala
 //Start timer
 val startTimeMillis = System.currentTimeMillis()
 
@@ -121,68 +123,86 @@ import org.apache.spark.ml.classification.LogisticRegression
 import org.apache.spark.ml.feature.StringIndexer
 import org.apache.spark.ml.feature.VectorIndexer
 import org.apache.spark.ml.feature.VectorAssembler
-
+```
+```scala
 // Error logger 
 import org.apache.log4j._
 Logger.getLogger("org").setLevel(Level.ERROR)
-
 // Creating a spark session named SVM
 val spark = SparkSession.builder.appName("SVM").getOrCreate()
-
+```
+```scala
 // Importing the dataframe bank
 val df  = spark.read.option("header","true").option("inferSchema", "true").option("delimiter",";").format("csv").load("C:/Users/Carlos Bojorquez/Desktop/Noveno semestre/bank.csv")
-
+```
+```scala
 // Applying index 
 val labelIndexer = new StringIndexer().setInputCol("y").setOutputCol("indexedLabel").fit(df)
 val indexed = labelIndexer.transform(df).drop("y").withColumnRenamed("indexedLabel", "label")
-
+```
+```scala
 //Vector of the numeric category columns.
 val vectorFeatures = (new VectorAssembler().setInputCols(Array("balance","day","duration","pdays","previous")).setOutputCol("features"))
-
+```
+```scala
 //Transforming the indexed value.
 val features = vectorFeatures.transform(indexed)
-
+```
+```scala
 //Renaming the column y as label.
 val featuresLabel = features.withColumnRenamed("y", "label")
-
+```
+```scala
 //Union of label and features as dataIndexed.
 val dataIndexed = featuresLabel.select("label","features")
-
+```
+```scala
 //Creation of labelIndexer and featureIndexer for the pipeline, Where features with distinct values > 4, are treated as continuous.
 val labelIndexer = new StringIndexer().setInputCol("label").setOutputCol("indexedLabel").fit(dataIndexed)
 val featureIndexer = new VectorIndexer().setInputCol("features").setOutputCol("indexedFeatures").setMaxCategories(4).fit(dataIndexed)
-
+```
+```scala
 //Training data as 70% and test data as 30%.
 val Array(training, test) = dataIndexed.randomSplit(Array(0.7, 0.3))
-
+```
+```scala
 //Linear Support Vector Machine object.
 val supportVM = new LinearSVC().setMaxIter(10).setRegParam(0.1)
-    
+```
+```scala
 //Fitting the trainingData into the model.
 val model = supportVM.fit(training)
-
+```
+```scala
 //Transforming testData for the predictions.
 val predictions = model.transform(test)
-
+```
+```scala
 //Obtaining the metrics.
 val predictionAndLabels = predictions.select($"prediction",$"label").as[(Double, Double)].rdd
 val metrics = new MulticlassMetrics(predictionAndLabels)
-
+```
+```scala
 //Confusion matrix.
 println("Confusion matrix:")
 println(metrics.confusionMatrix)
-
+```
+```scala
 //Accuracy and Test Error.
 println("Accuracy: " + metrics.accuracy) 
 println(s"Test Error = ${(1.0 - metrics.accuracy)}")
-
+```
+```scala
 val endTimeMillis = System.currentTimeMillis()
 val durationSeconds = (endTimeMillis - startTimeMillis) / 1000
-
+```
+```scala
 //Print the time in seconds that took the whole algorithm to compile
 println(durationSeconds)
+```
 
 #### Código para aplicar Logistic Regression al dataset bank.csv:
+```scala
 //Start timer
 val startTimeMillis = System.currentTimeMillis()
 
@@ -194,64 +214,80 @@ import org.apache.spark.ml.classification.LogisticRegression
 import org.apache.spark.ml.feature.VectorAssembler
 import org.apache.spark.ml.feature.StringIndexer
 import org.apache.spark.ml.feature.VectorIndexer
-
+```
+```scala
 //Error level code.
 import org.apache.log4j._
 Logger.getLogger("org").setLevel(Level.ERROR)
 
 //Spark session.
 val spark = SparkSession.builder.appName("LogisticRegression").getOrCreate()
-
+```
+```scala
 //Reading the csv file.
 val df  = spark.read.option("header","true").option("inferSchema", "true").option("delimiter",";").format("csv").load("C:/Users/Carlos Bojorquez/Desktop/Noveno semestre/bank.csv")
-
+```
+```scala
 //Indexing.
 val labelIndexer = new StringIndexer().setInputCol("y").setOutputCol("indexedLabel").fit(df)
 val indexed = labelIndexer.transform(df).drop("y").withColumnRenamed("indexedLabel", "label")
 
 //Vector of the numeric category columns.
 val vectorFeatures = (new VectorAssembler().setInputCols(Array("balance","day","duration","pdays","previous")).setOutputCol("features"))
-
+```
+```scala
 //Transforming the indexed value.
 val features = vectorFeatures.transform(indexed)
-
+```
+```scala
 //Renaming the column y as label.
 val featuresLabel = features.withColumnRenamed("y", "label")
-
+```
+```scala
 //Union of label and features as dataIndexed.
 val dataIndexed = featuresLabel.select("label","features")
-
+```
+```scala
 //Training data as 70% and test data as 30%.
 val Array(trainingData, testData) = dataIndexed.randomSplit(Array(0.7, 0.3))
-
+```
+```scala
 //Logistic regression object.
 val logisticReg = new LogisticRegression().setMaxIter(10).setRegParam(0.3).setElasticNetParam(0.8).setFamily("multinomial")
-
+```
+```scala
 //Fitting the model with the training data.
 val model = logisticReg.fit(trainingData)
-
+```
+```scala
 //Making the predictions transforming the testData.
 val predictions = model.transform(testData)
-
+```
+```scala
 //Obtaining the metrics.
 val predictionAndLabels = predictions.select($"prediction",$"label").as[(Double, Double)].rdd
 val metrics = new MulticlassMetrics(predictionAndLabels)
-
+```
+```scala
 //Confusion matrix.
 println("Confusion matrix:")
 println(metrics.confusionMatrix)
-
+```
+```scala
 //Accuracy and Test Error.
 println("Accuracy: " + metrics.accuracy) 
 println(s"Test Error: ${(1.0 - metrics.accuracy)}")
 
 val endTimeMillis = System.currentTimeMillis()
 val durationSeconds = (endTimeMillis - startTimeMillis) / 1000
-
+```
+```scala
 //Print the time in seconds that took the whole algorithm to compile
 println(durationSeconds)
+```
 
 #### Código para aplicar Decision Tree al dataset bank.csv:
+```scala
 //Start timer
 val startTimeMillis = System.currentTimeMillis()
 
@@ -266,52 +302,65 @@ import org.apache.spark.ml.feature.IndexToString
 import org.apache.spark.ml.feature.StringIndexer
 import org.apache.spark.ml.feature.VectorIndexer
 import org.apache.spark.ml.feature.VectorAssembler
-
+```
+```scala
 //Error level code.
 import org.apache.log4j._
 Logger.getLogger("org").setLevel(Level.ERROR)
 
 //Spark session.
 val spark = SparkSession.builder.appName("DecisionTree").getOrCreate()
-
+```
+```scala
 //Reading the csv file.
 val df  = spark.read.option("header","true").option("inferSchema", "true").option("delimiter",";").format("csv").load("C:/Users/Carlos Bojorquez/Desktop/Noveno semestre/bank.csv")
-
+```
+```scala
 //Indexing.
 val labelIndexer = new StringIndexer().setInputCol("y").setOutputCol("indexedLabel").fit(df)
 val indexed = labelIndexer.transform(df).drop("y").withColumnRenamed("indexedLabel", "label")
 
 //Vector of the numeric category columns.
 val vectorFeatures = (new VectorAssembler().setInputCols(Array("balance","day","duration","pdays","previous")).setOutputCol("features"))
-
+```
+```scala
 //Transforming the indexed value.
 val features = vectorFeatures.transform(indexed)
-
+```
+```scala
 //Renaming the column y as label.
 val featuresLabel = features.withColumnRenamed("y", "label")
-
+```
+```scala
 //Union of label and features as dataIndexed.
 val dataIndexed = featuresLabel.select("label","features")
-
+```
+```scala
 //Creation of labelIndexer and featureIndexer for the pipeline, Where features with distinct values > 4, are treated as continuous.
 val labelIndexer = new StringIndexer().setInputCol("label").setOutputCol("indexedLabel").fit(dataIndexed)
 val featureIndexer = new VectorIndexer().setInputCol("features").setOutputCol("indexedFeatures").setMaxCategories(4).fit(dataIndexed)
-
+```
+```scala
 //Training data as 70% and test data as 30%.
 val Array(training, test) = dataIndexed.randomSplit(Array(0.7, 0.3))
-
+```
+```scala
 //Creating the Decision Tree object.
 val decisionTree = new DecisionTreeClassifier().setLabelCol("indexedLabel").setFeaturesCol("indexedFeatures")
-
+```
+```scala
 //Creating the Index to String object.
 val labelConverter = new IndexToString().setInputCol("prediction").setOutputCol("predictedLabel").setLabels(labelIndexer.labels)
-
+```
+```scala
 //Creating the pipeline with the objects created before.
 val pipeline = new Pipeline().setStages(Array(labelIndexer, featureIndexer, decisionTree, labelConverter))
-
+```
+```scala
 //Fitting the model with training data.
 val model = pipeline.fit(training)
-
+```
+```scala
 //Making the predictions transforming the testData.
 val predictions = model.transform(test)
 
@@ -333,8 +382,10 @@ val durationSeconds = (endTimeMillis - startTimeMillis) / 1000
 
 //Print the time in seconds that took the whole algorithm to compile
 println(durationSeconds)
+```
 
 #### Código para aplicar Multilayer Perceptron al dataset bank.csv:
+```scala
 //Start timer
 val startTimeMillis = System.currentTimeMillis()
 
@@ -352,7 +403,8 @@ Logger.getLogger("org").setLevel(Level.ERROR)
 
 //Spark session.
 val spark = SparkSession.builder.appName("MultilayerPerceptron").getOrCreate()
-
+```
+```scala
 //Reading the csv file.
 val df  = spark.read.option("header","true").option("inferSchema", "true").option("delimiter",";").format("csv").load("C:/Users/Carlos Bojorquez/Desktop/Noveno semestre/bank.csv")
 
@@ -368,12 +420,14 @@ val features = vectorFeatures.transform(indexed)
 
 //Fitting indexed and finding labels 0 and 1.
 val labelIndexer = new StringIndexer().setInputCol("label").setOutputCol("indexedLabel").fit(indexed)
-
+```
+```scala
 //Splitting the data in 70% and 30%.
 val splits = features.randomSplit(Array(0.7, 0.3))
 val trainingData = splits(0)
 val testData = splits(1)
-
+```
+```scala
 //Creating the layers array.
 val layers = Array[Int](5, 4, 1, 2)
 
@@ -391,7 +445,8 @@ val predictionAndLabels = prediction.select("prediction", "label")
 
 //Creating a Multiclass Classification Evaluator object.
 val evaluator = new MulticlassClassificationEvaluator().setMetricName("accuracy")
-
+```
+```scala
 //Accuracy and Test Error.
 println(s"Accuracy: ${evaluator.evaluate(predictionAndLabels)}")
 println(s"Test Error: ${1.0 - evaluator.evaluate(predictionAndLabels)}")
@@ -401,135 +456,53 @@ val durationSeconds = (endTimeMillis - startTimeMillis) / 1000
 
 //Print the time in seconds that took the whole algorithm to compile
 println(durationSeconds)
-
+```
 
 ## Results
 
 #### SVM
-Attempt #
-Time (s)
-Accuracy (%)
-Error (%)
-Algorithm
-1
-19
-86.78
-13.21
-SVM
-2
-19
-89.67
-10.32
-SVM
-3
-20
-88.83
-11.16
-SVM
-4
-19
-88.48
-11.51
-SVM
-5
-19
-87.67
-12.32
-SVM
-6
-19
-89.13
-10.86
-SVM
-7
-18
-88.14
-11.85
-SVM
-8
-19
-88.73
-11.26
-SVM
-9
-19
-87.82
-12.17
-SVM
-10
-19
-88.49
-11.5
-SVM
-Average
-19
-88.374
-11.616
-SVM
+| Attempt | Time (s) | Accuracy (%) | Error (%) | Algorithm |
+| ------- | -------- | ------------ | --------- | --------- |
+| 1       | 19       | 86.78        | 13.21     | SVM       |
+| 2       | 19       | 89.67        | 10.32     | SVM       |
+| 3       | 20       | 88.83        | 11.16     | SVM       |
+| 4       | 19       | 88.48        | 11.51     | SVM       |
+| 5       | 19       | 87.67        | 12.32     | SVM       |
+| 6       | 19       | 89.13        | 10.86     | SVM       |
+| 7       | 18       | 88.14        | 11.85     | SVM       |
+| 8       | 19       | 88.73        | 11.26     | SVM       |
+| 9       | 19       | 87.82        | 12.17     | SVM       |
+| 10      | 19       | 88.49        | 11.5      | SVM
+
+| Average |
+| ------- |
+| 19      |
+| 88.374  |
+| 11.616  |
+| SVM     |
 *Todos los tests se llevaron a cabo de manera individual.
 
 
 #### Logistic Regression
-Attempt #
-Time (s)
-Accuracy (%)
-Error (%)
-Algorithm
-1
-26
-88.55
-11.44
-Logistic Regression
-2
-28
-88.64
-11.35
-Logistic Regression
-3
-29
-87.88
-12.11
-Logistic Regression
-4
-28
-88.85
-11.14
-Logistic Regression
-5
-27
-89.19
-10.8
-Logistic Regression
-6
-27
-86.86
-13.13
-Logistic Regression
-7
-27
-89.13
-10.86
-Logistic Regression
-8
-25
-87.69
-12.3
-Logistic Regression
-9
-25
-89.05
-10.94
-Logistic Regression
-10
-28
-88.03
-11.96
-Logistic Regression
-Average
-27
-88.387
-11.603
-Logistic Regression
+| Attempt | Time (s) | Accuracy (%) | Error (%) | Algorithm           |
+| ------- | -------- | ------------ | --------- | ------------------- |
+| 1       | 26       | 88.55        | 11.44     | Logistic Regression |
+| 2       | 28       | 88.64        | 11.35     | Logistic Regression |
+| 3       | 29       | 87.88        | 12.11     | Logistic Regression |
+| 4       | 28       | 88.85        | 11.14     | Logistic Regression |
+| 5       | 27       | 89.19        | 10.8      | Logistic Regression |
+| 6       | 27       | 86.86        | 13.13     | Logistic Regression |
+| 7       | 27       | 89.13        | 10.86     | Logistic Regression |
+| 8       | 25       | 87.69        | 12.3      | Logistic Regression |
+| 9       | 25       | 89.05        | 10.94     | Logistic Regression |
+| 10      | 28       | 88.03        | 11.96     | Logistic Regression |
+
+| Average             |
+| ------------------- |
+| 27                  |
+| 88.387              |
+| 11.603              |
+| Logistic Regression |
 *Todos los tests se llevaron a cabo de manera individual.
 
 #### Decision Tree
