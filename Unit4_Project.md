@@ -480,7 +480,8 @@ println(durationSeconds)
 |Accuracy % | 88.374  |
 |Error % | 11.616  |
 |Algorithm | SVM     |
-*Todos los tests se llevaron a cabo de manera individual.
+
+*All tests were carried out individually
 
 
 #### Logistic Regression
@@ -503,7 +504,8 @@ println(durationSeconds)
 |Accuracy %| 88.387              |
 |Error %| 11.603              |
 |Algorithm| Logistic Regression |
-*Todos los tests se llevaron a cabo de manera individual.
+
+*All tests were carried out individually
 
 #### Decision Tree
 
@@ -521,12 +523,13 @@ println(durationSeconds)
 | 10      | 29       | 88.15        | 11.84     | Decision Tree |
 
 |Value | Average       |
-|----------| ------------ -| 
+|----------| ------------|
 |Time | 21.2          |
 |Accuracy %| 88.386        |
 |Error %| 11.604        |
 |Algorithm| Decision Tree |
-*Todos los tests se llevaron a cabo de manera individual
+
+*All tests were carried out individually
 
 #### Multilayer Perceptron
 | Attempt | Time (s) | Accuracy (%) | Error (%) | Algorithm             |
@@ -548,7 +551,8 @@ println(durationSeconds)
 |Accuracy %| 88.447                |
 |Error %| 11.543                |
 |Algorithm | Multilayer Perceptron |
-*Todos los tests se llevaron a cabo de manera individual
+
+*All tests were carried out individually
 
 ## Conclusions
 
