@@ -82,15 +82,15 @@ The Perceptron consists of an input layer and an output layer that are completel
 
 ## Implementation
 
-Para llevar a cabo el desarrollo del presente proyecto utilizamos las herramientas Apache Spark para programar en el lenguaje Scala.
+To carry out the development of this project, we use Apache Spark tools to program in the Scala language.
 
-#### ¿Qué es Apache Spark?
-Apache Spark es un framework de programación para procesamiento de datos distribuidos diseñado para ser rápido y de propósito general. Como su propio nombre indica, ha sido desarrollada en el marco del proyecto Apache, lo que garantiza su licencia Open Source. [7]
+#### What is Apache Spark?
+Apache Spark is a distributed data processing programming framework designed to be fast and general-purpose. As its name suggests, it has been developed within the framework of the Apache project, which guarantees its Open Source license. [7]
 
-#### ¿Qué es Scala?
-Scala es un lenguaje de programación moderno multi-paradigma diseñado para expresar patrones de programación comunes de una forma concisa, elegante, y con tipado seguro. Integra fácilmente características de lenguajes orientados a objetos y funcionales. [8]
+#### What is Scala?
+Scala is a modern multi-paradigm programming language designed to express common programming patterns in a concise, elegant, and securely typed way. Easily integrate features of functional and object-oriented languages. [8]
 
-##### A continuación presentaremos todas las librerías necesarias para desarrollar los algoritmos SVM, Logistic Regression, Decision Trees y Multilayer Perceptron:
+##### Next, we will present all the libraries necessary to develop the SVM, Logistic Regression, Decision Trees and Multilayer Perceptron algorithms:
 ```scala
 import org.apache.spark.ml.classification.LinearSVC
 import org.apache.spark.ml.Pipeline
@@ -108,7 +108,7 @@ import org.apache.spark.ml.classification.MultilayerPerceptronClassifier
 import org.apache.spark.ml.feature.StringIndexer
 import org.apache.spark.ml.feature.VectorAssembler
 ```
-#### Código para aplicar SVM al dataset bank.csv:
+#### Code to apply SVM to the bank.csv dataset:
 ```scala
 //Start timer
 val startTimeMillis = System.currentTimeMillis()
@@ -201,7 +201,7 @@ val durationSeconds = (endTimeMillis - startTimeMillis) / 1000
 println(durationSeconds)
 ```
 
-#### Código para aplicar Logistic Regression al dataset bank.csv:
+#### Code to apply Logistic Regression to the bank.csv dataset:
 ```scala
 //Start timer
 val startTimeMillis = System.currentTimeMillis()
@@ -286,7 +286,7 @@ val durationSeconds = (endTimeMillis - startTimeMillis) / 1000
 println(durationSeconds)
 ```
 
-#### Código para aplicar Decision Tree al dataset bank.csv:
+#### Code to apply Decision Tree to the bank.csv dataset:
 ```scala
 //Start timer
 val startTimeMillis = System.currentTimeMillis()
@@ -384,7 +384,7 @@ val durationSeconds = (endTimeMillis - startTimeMillis) / 1000
 println(durationSeconds)
 ```
 
-#### Código para aplicar Multilayer Perceptron al dataset bank.csv:
+#### Code to apply Multilayer Perceptron to the dataset bank.csv:
 ```scala
 //Start timer
 val startTimeMillis = System.currentTimeMillis()
@@ -562,18 +562,18 @@ We can see that we have 2 possible scenarios, one where what we want is the maxi
 
 ## References
 
-[1] Dr. Alexandro Heiblum Robles. (2018). Los datos masivos (Big Data). 10 de enero de 2021, de INCyTU
+[1] Dr. Alexandro Heiblum Robles. (2018). Los datos masivos (Big Data). January 10, 2021, de INCyTU
 
-[2] IBM Cloud Education. (2020). What is Machine Learning?. 10 de enero de 2021, de IBM
+[2] IBM Cloud Education. (2020). What is Machine Learning?. January 10, 2021, de IBM
 
-[3] Celia Mercedes Salcedo Poma. (-). Estimación de la ocurrencia de incidencias en declaraciones de importación. 10 de enero de 2021, de Universidad Nacional de San Marcos
+[3] Celia Mercedes Salcedo Poma. (-). Estimación de la ocurrencia de incidencias en declaraciones de importación. January 10, 2021, de Universidad Nacional de San Marcos
 
-[4] Carl Kingsford and Steven L Salzberg. (2008). What are decision trees?. 10 de enero de 2021, de National Center for Biotechnology Information
+[4] Carl Kingsford and Steven L Salzberg. (2008). What are decision trees?. January 10, 2021, de National Center for Biotechnology Information
 
-[5] Mathias M. AdankonMohamed Cheriet. (2009). Support Vector Machine. 10 de enero de 2021, de Springer
+[5] Mathias M. AdankonMohamed Cheriet. (2009). Support Vector Machine. January 10, 2021, de Springer
 
-[6] DeepAI. (2021). Multilayer Perceptron. 10 de enero de 2021, de DeepAI
+[6] DeepAI. (2021). Multilayer Perceptron. January 10, 2021, de DeepAI
 
-[7] ESIC. (2018). Apache Spark: Introducción, qué es y cómo funciona. 10 de enero de 2021, de ESIC
+[7] ESIC. (2018). Apache Spark: Introducción, qué es y cómo funciona. January 10, 2021, de ESIC
 
-[8] Scala. (2021). Introducción | Scala Documentation. 10 de enero de 2021, de The Scala Programming Language
+[8] Scala. (2021). Introducción | Scala Documentation. January 10, 2021, de The Scala Programming Language
