@@ -474,12 +474,12 @@ println(durationSeconds)
 | 9       | 19       | 87.82        | 12.17     | SVM       |
 | 10      | 19       | 88.49        | 11.5      | SVM
 
-| Average |
-| ------- |
-| 19      |
-| 88.374  |
-| 11.616  |
-| SVM     |
+|Value | Average |
+| ------- | ------- |
+|Time | 19      |
+|Accuracy % | 88.374  |
+|Error % | 11.616  |
+|Algorithm | SVM     |
 *Todos los tests se llevaron a cabo de manera individual.
 
 
@@ -497,12 +497,12 @@ println(durationSeconds)
 | 9       | 25       | 89.05        | 10.94     | Logistic Regression |
 | 10      | 28       | 88.03        | 11.96     | Logistic Regression |
 
-| Average             |
-| ------------------- |
-| 27                  |
-| 88.387              |
-| 11.603              |
-| Logistic Regression |
+|Value | Average             |
+| ------------------- | ------------------- |
+|Time | 27                  |
+|Accuracy %| 88.387              |
+|Error %| 11.603              |
+|Algorithm| Logistic Regression |
 *Todos los tests se llevaron a cabo de manera individual.
 
 #### Decision Tree
@@ -520,12 +520,12 @@ println(durationSeconds)
 | 9       | 22       | 87.88        | 12.11     | Decision Tree |
 | 10      | 29       | 88.15        | 11.84     | Decision Tree |
 
-| Average       |
-| ------------ -| 
-| 21.2          |
-| 88.386        |
-| 11.604        |
-| Decision Tree |
+|Value | Average       |
+|----------| ------------ -| 
+|Time | 21.2          |
+|Accuracy %| 88.386        |
+|Error %| 11.604        |
+|Algorithm| Decision Tree |
 *Todos los tests se llevaron a cabo de manera individual
 
 #### Multilayer Perceptron
@@ -542,12 +542,12 @@ println(durationSeconds)
 | 9       | 27       | 89.48        | 10.51     | Multilayer Perceptron |
 | 10      | 24       | 87.24        | 12.75     | Multilayer Perceptron |
 
-| Average               |
-| --------------------- |
-| 23.5                  | 
-| 88.447                |
-| 11.543                |
-| Multilayer Perceptron |
+| Value | Average               |
+|----------| --------------------- |
+|Time | 23.5                  | 
+|Accuracy %| 88.447                |
+|Error %| 11.543                |
+|Algorithm | Multilayer Perceptron |
 *Todos los tests se llevaron a cabo de manera individual
 
 ## Conclusions
@@ -559,10 +559,17 @@ We can see that we have 2 possible scenarios, one where what we want is the maxi
 ## References
 
 [1] Dr. Alexandro Heiblum Robles. (2018). Los datos masivos (Big Data). 10 de enero de 2021, de INCyTU
+
 [2] IBM Cloud Education. (2020). What is Machine Learning?. 10 de enero de 2021, de IBM
+
 [3] Celia Mercedes Salcedo Poma. (-). Estimación de la ocurrencia de incidencias en declaraciones de importación. 10 de enero de 2021, de Universidad Nacional de San Marcos
+
 [4] Carl Kingsford and Steven L Salzberg. (2008). What are decision trees?. 10 de enero de 2021, de National Center for Biotechnology Information
+
 [5] Mathias M. AdankonMohamed Cheriet. (2009). Support Vector Machine. 10 de enero de 2021, de Springer
+
 [6] DeepAI. (2021). Multilayer Perceptron. 10 de enero de 2021, de DeepAI
+
 [7] ESIC. (2018). Apache Spark: Introducción, qué es y cómo funciona. 10 de enero de 2021, de ESIC
+
 [8] Scala. (2021). Introducción | Scala Documentation. 10 de enero de 2021, de The Scala Programming Language
